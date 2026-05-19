@@ -1,0 +1,83 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: NGA Earth-Info REST API — EOPP
+  description: 'NGA Earth-Info REST API — EOPP. 1 operations. Lead operation: Download Earth Orientation Parameter Predictions.
+    Self-contained Naftiko capability covering one National Geospatial Intelligence Agency business surface.'
+  tags:
+  - National Geospatial Intelligence Agency
+  - EOPP
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY_API_KEY: NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: national-geospatial-intelligence-agency-eopp
+    baseUri: https://earth-info.nga.mil
+    description: NGA Earth-Info REST API — EOPP business capability. Self-contained, no shared references.
+    resources:
+    - name: api-eopp
+      path: /api/eopp
+      operations:
+      - name: geteopp
+        method: GET
+        description: Download Earth Orientation Parameter Predictions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: date
+          in: query
+          type: string
+          description: Target date in YYYY-MM-DD format.
+          required: true
+        - name: format
+          in: query
+          type: string
+          description: EOPP product format.
+  exposes:
+  - type: rest
+    namespace: national-geospatial-intelligence-agency-eopp-rest
+    port: 8080
+    description: REST adapter for NGA Earth-Info REST API — EOPP. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/eopp
+      name: api-eopp
+      description: REST surface for api-eopp.
+      operations:
+      - method: GET
+        name: geteopp
+        description: Download Earth Orientation Parameter Predictions
+        call: national-geospatial-intelligence-agency-eopp.geteopp
+        with:
+          date: rest.date
+          format: rest.format
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: national-geospatial-intelligence-agency-eopp-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for NGA Earth-Info REST API — EOPP. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: download-earth-orientation-parameter-predictions
+      description: Download Earth Orientation Parameter Predictions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-geospatial-intelligence-agency-eopp.geteopp
+      with:
+        date: tools.date
+        format: tools.format
+      outputParameters:
+      - type: object
+        mapping: $.

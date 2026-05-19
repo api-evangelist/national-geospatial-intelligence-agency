@@ -1,0 +1,119 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: NGA Earth-Info REST API — Orbit
+  description: 'NGA Earth-Info REST API — Orbit. 2 operations. Lead operation: Download 30-day orbit prediction. Self-contained
+    Naftiko capability covering one National Geospatial Intelligence Agency business surface.'
+  tags:
+  - National Geospatial Intelligence Agency
+  - Orbit
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY_API_KEY: NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: national-geospatial-intelligence-agency-orbit
+    baseUri: https://earth-info.nga.mil
+    description: NGA Earth-Info REST API — Orbit business capability. Self-contained, no shared references.
+    resources:
+    - name: api-orbit-30-day
+      path: /api/orbit/30-day
+      operations:
+      - name: getorbit30day
+        method: GET
+        description: Download 30-day orbit prediction
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: date
+          in: query
+          type: string
+          description: Target date in YYYY-MM-DD format.
+          required: true
+    - name: api-orbit-9-day
+      path: /api/orbit/9-day
+      operations:
+      - name: getorbit9day
+        method: GET
+        description: Download 9-day orbit prediction
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: date
+          in: query
+          type: string
+          description: Target date in YYYY-MM-DD format.
+          required: true
+  exposes:
+  - type: rest
+    namespace: national-geospatial-intelligence-agency-orbit-rest
+    port: 8080
+    description: REST adapter for NGA Earth-Info REST API — Orbit. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/orbit/30-day
+      name: api-orbit-30-day
+      description: REST surface for api-orbit-30-day.
+      operations:
+      - method: GET
+        name: getorbit30day
+        description: Download 30-day orbit prediction
+        call: national-geospatial-intelligence-agency-orbit.getorbit30day
+        with:
+          date: rest.date
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/orbit/9-day
+      name: api-orbit-9-day
+      description: REST surface for api-orbit-9-day.
+      operations:
+      - method: GET
+        name: getorbit9day
+        description: Download 9-day orbit prediction
+        call: national-geospatial-intelligence-agency-orbit.getorbit9day
+        with:
+          date: rest.date
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: national-geospatial-intelligence-agency-orbit-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for NGA Earth-Info REST API — Orbit. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: download-30-day-orbit-prediction
+      description: Download 30-day orbit prediction
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-geospatial-intelligence-agency-orbit.getorbit30day
+      with:
+        date: tools.date
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: download-9-day-orbit-prediction
+      description: Download 9-day orbit prediction
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-geospatial-intelligence-agency-orbit.getorbit9day
+      with:
+        date: tools.date
+      outputParameters:
+      - type: object
+        mapping: $.

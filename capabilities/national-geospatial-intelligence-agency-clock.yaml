@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: NGA Earth-Info REST API — Clock
+  description: 'NGA Earth-Info REST API — Clock. 1 operations. Lead operation: Download Navdata clock state file. Self-contained
+    Naftiko capability covering one National Geospatial Intelligence Agency business surface.'
+  tags:
+  - National Geospatial Intelligence Agency
+  - Clock
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY_API_KEY: NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: national-geospatial-intelligence-agency-clock
+    baseUri: https://earth-info.nga.mil
+    description: NGA Earth-Info REST API — Clock business capability. Self-contained, no shared references.
+    resources:
+    - name: api-clock-state
+      path: /api/clock-state
+      operations:
+      - name: getclockstate
+        method: GET
+        description: Download Navdata clock state file
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: date
+          in: query
+          type: string
+          description: Target date in YYYY-MM-DD format.
+          required: true
+  exposes:
+  - type: rest
+    namespace: national-geospatial-intelligence-agency-clock-rest
+    port: 8080
+    description: REST adapter for NGA Earth-Info REST API — Clock. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/clock-state
+      name: api-clock-state
+      description: REST surface for api-clock-state.
+      operations:
+      - method: GET
+        name: getclockstate
+        description: Download Navdata clock state file
+        call: national-geospatial-intelligence-agency-clock.getclockstate
+        with:
+          date: rest.date
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: national-geospatial-intelligence-agency-clock-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for NGA Earth-Info REST API — Clock. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: download-navdata-clock-state-file
+      description: Download Navdata clock state file
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-geospatial-intelligence-agency-clock.getclockstate
+      with:
+        date: tools.date
+      outputParameters:
+      - type: object
+        mapping: $.
