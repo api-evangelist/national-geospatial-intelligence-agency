@@ -12,51 +12,53 @@ created: '2024-12-25'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 tags:
-- Federal Government
-- Geospatial
-- Intelligence
-- Defense
-- Geomatics
-apis:
-- aid: national-geospatial-intelligence-agency:earth-info-rest-api
-  name: NGA Earth-Info REST API
-  description: NGA Office of Geomatics REST API providing programmatic download of GPS ephemeris (Center of Mass and Antenna
-    Phase Center), Earth Orientation Parameter Predictions, Navdata clock state files, and 9-day and 30-day orbit prediction
-    products.
-  humanURL: https://earth-info.nga.mil/
-  baseURL: https://earth-info.nga.mil/
-  tags:
+  - Federal Government
   - Geospatial
-  - GPS
-  - Ephemeris
-  - Geodesy
-  - WGS84
-  properties:
-  - type: Documentation
-    url: https://earth-info.nga.mil/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/main/openapi/national-geospatial-intelligence-agency-openapi.json
+  - Intelligence
+  - Defense
+  - Geomatics
+apis:
+  - aid: national-geospatial-intelligence-agency:earth-info-rest-api
+    name: NGA Earth-Info REST API
+    description: NGA Office of Geomatics REST API providing programmatic download of GPS ephemeris (Center of Mass and Antenna
+      Phase Center), Earth Orientation Parameter Predictions, Navdata clock state files, and 9-day and 30-day orbit prediction
+      products.
+    humanURL: https://earth-info.nga.mil/
+    baseURL: https://earth-info.nga.mil/
+    tags:
+    - Geospatial
+    - GPS
+    - Ephemeris
+    - Geodesy
+    - WGS84
+    properties:
+    - type: Documentation
+      url: https://earth-info.nga.mil/
+    - type: OpenAPI
+      url: https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/main/openapi/national-geospatial-intelligence-agency-openapi.json
+    - type: Portal
+      url: https://earth-info.nga.mil/
+    - type: NaftikoCapability
+      url: capabilities/national-geospatial-intelligence-agency-clock.yaml
+    - type: NaftikoCapability
+      url: capabilities/national-geospatial-intelligence-agency-eopp.yaml
+    - type: NaftikoCapability
+      url: capabilities/national-geospatial-intelligence-agency-ephemeris.yaml
+    - type: NaftikoCapability
+      url: capabilities/national-geospatial-intelligence-agency-orbit.yaml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/ngageoint
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/nga
+  - type: Website
+    url: https://www.nga.mil/
   - type: Portal
     url: https://earth-info.nga.mil/
-  - type: NaftikoCapability
-    url: capabilities/national-geospatial-intelligence-agency-clock.yaml
-  - type: NaftikoCapability
-    url: capabilities/national-geospatial-intelligence-agency-eopp.yaml
-  - type: NaftikoCapability
-    url: capabilities/national-geospatial-intelligence-agency-ephemeris.yaml
-  - type: NaftikoCapability
-    url: capabilities/national-geospatial-intelligence-agency-orbit.yaml
-common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/nga
-- type: Website
-  url: https://www.nga.mil/
-- type: Portal
-  url: https://earth-info.nga.mil/
-- type: Tearline
-  url: https://www.tearline.mil/
-- type: Contact
-  url: mailto:geomatics@nga.mil
+  - type: Tearline
+    url: https://www.tearline.mil/
+  - type: Contact
+    url: mailto:geomatics@nga.mil
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
