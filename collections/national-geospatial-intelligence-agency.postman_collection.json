@@ -1,0 +1,587 @@
+{
+  "item": [
+    {
+      "id": "8826cc35-d485-488c-b0a4-82c550a8a856",
+      "name": "Ephemeris",
+      "description": {
+        "content": "GPS ephemeris products, including Center of Mass and Antenna Phase Center variants.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5183f948-bc32-472c-9f10-dc5855374910",
+          "name": "Download GPS ephemeris (Center of Mass)",
+          "request": {
+            "name": "Download GPS ephemeris (Center of Mass)",
+            "description": {
+              "content": "Returns the GPS ephemeris product referenced to the satellite Center of Mass for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "ephemeris",
+                "center-of-mass"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a077eba0-a690-4d90-8600-1aa1ce445e01",
+              "name": "Ephemeris file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ephemeris",
+                    "center-of-mass"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f966463e-3ca3-40c1-94bf-13d39c284d16",
+          "name": "Download GPS ephemeris (Antenna Phase Center)",
+          "request": {
+            "name": "Download GPS ephemeris (Antenna Phase Center)",
+            "description": {
+              "content": "Returns the GPS ephemeris product referenced to the Antenna Phase Center (APC) for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "ephemeris",
+                "antenna-phase-center"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "13097675-e40b-49d8-8006-d666dab1d894",
+              "name": "Ephemeris file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ephemeris",
+                    "antenna-phase-center"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "3eccd785-398d-473c-a99a-b9692dc6b49b",
+      "name": "EOPP",
+      "description": {
+        "content": "Earth Orientation Parameter Predictions in multiple formats.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c7137b0-7b7a-48a2-8c9a-852320c74cef",
+          "name": "Download Earth Orientation Parameter Predictions",
+          "request": {
+            "name": "Download Earth Orientation Parameter Predictions",
+            "description": {
+              "content": "Returns Earth Orientation Parameter Prediction data for the specified date in the requested format.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "eopp"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>",
+                  "description": "EOPP product format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b7f28306-06f2-4186-afba-eeeeb7df8f6f",
+              "name": "EOPP file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "eopp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "a08550c6-6cfa-489f-b0c4-a95c5883325b",
+      "name": "Orbit",
+      "description": {
+        "content": "Short-term orbit prediction products.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d0bc8a03-fb82-4ad8-9cdf-278c98c1ef05",
+          "name": "Download 9-day orbit prediction",
+          "request": {
+            "name": "Download 9-day orbit prediction",
+            "description": {
+              "content": "Returns the 9-day GPS orbit prediction product for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orbit",
+                "9-day"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b27309cc-fc62-4d09-b43c-80f901a258e7",
+              "name": "9-day orbit prediction file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orbit",
+                    "9-day"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3f5f74c2-f0f6-4142-ae08-bfa9d91031a1",
+          "name": "Download 30-day orbit prediction",
+          "request": {
+            "name": "Download 30-day orbit prediction",
+            "description": {
+              "content": "Returns the 30-day GPS orbit prediction product for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orbit",
+                "30-day"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2b65db6c-1e87-4909-89a8-963d75f3b11b",
+              "name": "30-day orbit prediction file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orbit",
+                    "30-day"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b4cfe3bf-8a4b-40c2-9ae5-2372dae033a0",
+      "name": "Clock",
+      "description": {
+        "content": "Navdata clock state files.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6006fef6-c0a4-4d0a-9130-eb10cf800f54",
+          "name": "Download Navdata clock state file",
+          "request": {
+            "name": "Download Navdata clock state file",
+            "description": {
+              "content": "Returns the Navdata clock state file for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "clock-state"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "35a374c5-2453-481f-a1d1-67bcb83b8cbb",
+              "name": "Clock state file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "clock-state"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://earth-info.nga.mil",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b66253bf-f4d4-4d41-a148-f33e9d5dec3e",
+    "name": "NGA Earth-Info REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Geospatial-Intelligence Agency (NGA) Earth-Info REST API provides programmatic access to GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products published by the NGA Office of Geomatics. Authoritative interactive documentation is published in OpenAPI format on the Earth-Info portal.\n\nContact Support:\n Name: NGA Office of Geomatics\n Email: geomatics@nga.mil",
+      "type": "text/plain"
+    }
+  }
+}

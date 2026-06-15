@@ -1,0 +1,162 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NGA Earth-Info REST API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ephemeris",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download GPS ephemeris (Center of Mass)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/ephemeris/center-of-mass",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the GPS ephemeris product referenced to the satellite Center of Mass for the specified date."
+        },
+        {
+          "info": {
+            "name": "Download GPS ephemeris (Antenna Phase Center)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/ephemeris/antenna-phase-center",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the GPS ephemeris product referenced to the Antenna Phase Center (APC) for the specified date."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "EOPP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download Earth Orientation Parameter Predictions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/eopp",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "EOPP product format."
+              }
+            ]
+          },
+          "docs": "Returns Earth Orientation Parameter Prediction data for the specified date in the requested format."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Clock",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download Navdata clock state file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/clock-state",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the Navdata clock state file for the specified date."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orbit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download 9-day orbit prediction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/orbit/9-day",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the 9-day GPS orbit prediction product for the specified date."
+        },
+        {
+          "info": {
+            "name": "Download 30-day orbit prediction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/orbit/30-day",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the 30-day GPS orbit prediction product for the specified date."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -2,22 +2,24 @@
 
 The National Geospatial-Intelligence Agency (NGA) is a combat support agency within the U.S. Department of Defense that provides geospatial intelligence in support of national security. Through its Office of Geomatics, NGA publishes the Earth-Info portal, which exposes a REST API in OpenAPI format for downloading GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products. NGA also maintains the WGS 84 reference frame, EGM2008 gravitational model, and the GEOTRANS coordinate conversion tool.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml)
 
 ## Scope
 
 - **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
 
 ## Tags
 
-- Federal Government, Geospatial, Intelligence, Defense, Geomatics
+- Federal Government
+- Geospatial
+- Intelligence
+- Defense
+- Geomatics
 
 ## Timestamps
 
 - **Created:** 2024-12-25
-- **Modified:** 2026-04-28
+- **Modified:** 2026-05-19
 
 ## APIs
 
@@ -25,22 +27,29 @@ The National Geospatial-Intelligence Agency (NGA) is a combat support agency wit
 
 NGA Office of Geomatics REST API providing programmatic download of GPS ephemeris (Center of Mass and Antenna Phase Center), Earth Orientation Parameter Predictions, Navdata clock state files, and 9-day and 30-day orbit prediction products.
 
-**Human URL:** [https://earth-info.nga.mil/](https://earth-info.nga.mil/)
-
-**Base URL:** `https://earth-info.nga.mil/`
+- **Human URL:** [https://earth-info.nga.mil/](https://earth-info.nga.mil/)
+- **Base URL:** `https://earth-info.nga.mil/`
 
 #### Tags
 
-- Geospatial, GPS, Ephemeris, Geodesy, WGS84
+- Geospatial
+- GPS
+- Ephemeris
+- Geodesy
+- WGS84
 
 #### Properties
 
 - [Documentation](https://earth-info.nga.mil/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/main/openapi/national-geospatial-intelligence-agency-openapi.json)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/main/openapi/national-geospatial-intelligence-agency-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Portal](https://earth-info.nga.mil/)
+- [Postman Collection](collections/national-geospatial-intelligence-agency.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/national-geospatial-intelligence-agency.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
+- [GitHub Organization](https://github.com/ngageoint)
+- [LinkedIn](https://www.linkedin.com/company/nga)
 - [Website](https://www.nga.mil/)
 - [Portal](https://earth-info.nga.mil/)
 - [Tearline](https://www.tearline.mil/)
@@ -49,5 +58,4 @@ NGA Office of Geomatics REST API providing programmatic download of GPS ephemeri
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** kin@apievangelist.com
