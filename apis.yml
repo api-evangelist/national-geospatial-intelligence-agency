@@ -7,7 +7,7 @@ description: >-
   Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products. NGA
   also maintains the WGS 84 reference frame, EGM2008 gravitational model, and the GEOTRANS coordinate conversion tool.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml
 created: '2024-12-25'
 modified: '2026-05-19'
