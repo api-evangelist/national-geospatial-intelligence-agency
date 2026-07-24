@@ -1,0 +1,62 @@
+openapi: 3.0.3
+info:
+  title: NGA Earth-Info REST Clock Ephemeris API
+  description: The National Geospatial-Intelligence Agency (NGA) Earth-Info REST API provides programmatic access to GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products published by the NGA Office of Geomatics. Authoritative interactive documentation is published in OpenAPI format on the Earth-Info portal.
+  version: 1.0.0
+  contact:
+    name: NGA Office of Geomatics
+    email: geomatics@nga.mil
+    url: https://earth-info.nga.mil/
+servers:
+- url: https://earth-info.nga.mil
+  description: NGA Earth-Info production endpoint
+tags:
+- name: Ephemeris
+  description: GPS ephemeris products, including Center of Mass and Antenna Phase Center variants.
+paths:
+  /api/ephemeris/center-of-mass:
+    get:
+      tags:
+      - Ephemeris
+      summary: Download GPS ephemeris (Center of Mass)
+      description: Returns the GPS ephemeris product referenced to the satellite Center of Mass for the specified date.
+      operationId: getEphemerisCenterOfMass
+      parameters:
+      - name: date
+        in: query
+        required: true
+        description: Target date in YYYY-MM-DD format.
+        schema:
+          type: string
+          format: date
+      responses:
+        '200':
+          description: Ephemeris file.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  /api/ephemeris/antenna-phase-center:
+    get:
+      tags:
+      - Ephemeris
+      summary: Download GPS ephemeris (Antenna Phase Center)
+      description: Returns the GPS ephemeris product referenced to the Antenna Phase Center (APC) for the specified date.
+      operationId: getEphemerisAntennaPhaseCenter
+      parameters:
+      - name: date
+        in: query
+        required: true
+        description: Target date in YYYY-MM-DD format.
+        schema:
+          type: string
+          format: date
+      responses:
+        '200':
+          description: Ephemeris file.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
