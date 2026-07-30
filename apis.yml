@@ -7,7 +7,19 @@ description: >-
   Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products. NGA
   also maintains the WGS 84 reference frame, EGM2008 gravitational model, and the GEOTRANS coordinate conversion tool.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/national-geospatial-intelligence-agency.png
 url: https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml
 created: '2024-12-25'
 modified: '2026-05-19'
@@ -19,28 +31,65 @@ tags:
   - Defense
   - Geomatics
 apis:
-  - aid: national-geospatial-intelligence-agency:earth-info-rest-api
-    name: NGA Earth-Info REST API
-    description: >-
-      NGA Office of Geomatics REST API providing programmatic download of GPS ephemeris (Center of Mass and Antenna
-      Phase Center), Earth Orientation Parameter Predictions, Navdata clock state files, and 9-day and 30-day orbit
-      prediction products.
-    humanURL: https://earth-info.nga.mil/
-    baseURL: https://earth-info.nga.mil/
-    tags:
-      - Geospatial
-      - GPS
-      - Ephemeris
-      - Geodesy
-      - WGS84
-    properties:
-      - type: Documentation
-        url: https://earth-info.nga.mil/
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/main/openapi/national-geospatial-intelligence-agency-openapi.json
-      - type: Portal
-        url: https://earth-info.nga.mil/
+- aid: >-
+    national-geospatial-intelligence-agency:national-geospatial-intelligence-agency-clock-api
+  name: National Geospatial-Intelligence Agency Clock API
+  description: Navdata clock state files.
+  humanURL: https://earth-info.nga.mil/
+  baseURL: https://earth-info.nga.mil/
+  tags:
+  - Clock
+  properties:
+  - type: OpenAPI
+    url: openapi/national-geospatial-intelligence-agency-clock-api-openapi.yml
+  - type: Documentation
+    url: https://earth-info.nga.mil/
+  - type: Portal
+    url: https://earth-info.nga.mil/
+- aid: national-geospatial-intelligence-agency:national-geospatial-intelligence-agency-eopp-api
+  name: National Geospatial-Intelligence Agency EOPP API
+  description: Earth Orientation Parameter Predictions in multiple formats.
+  humanURL: https://earth-info.nga.mil/
+  baseURL: https://earth-info.nga.mil/
+  tags:
+  - EOPP
+  properties:
+  - type: OpenAPI
+    url: openapi/national-geospatial-intelligence-agency-eopp-api-openapi.yml
+  - type: Documentation
+    url: https://earth-info.nga.mil/
+  - type: Portal
+    url: https://earth-info.nga.mil/
+- aid: >-
+    national-geospatial-intelligence-agency:national-geospatial-intelligence-agency-ephemeris-api
+  name: National Geospatial-Intelligence Agency Ephemeris API
+  description: GPS ephemeris products, including Center of Mass and Antenna Phase Center variants.
+  humanURL: https://earth-info.nga.mil/
+  baseURL: https://earth-info.nga.mil/
+  tags:
+  - Ephemeris
+  properties:
+  - type: OpenAPI
+    url: openapi/national-geospatial-intelligence-agency-ephemeris-api-openapi.yml
+  - type: Documentation
+    url: https://earth-info.nga.mil/
+  - type: Portal
+    url: https://earth-info.nga.mil/
+- aid: >-
+    national-geospatial-intelligence-agency:national-geospatial-intelligence-agency-orbit-api
+  name: National Geospatial-Intelligence Agency Orbit API
+  description: Short-term orbit prediction products.
+  humanURL: https://earth-info.nga.mil/
+  baseURL: https://earth-info.nga.mil/
+  tags:
+  - Orbit
+  properties:
+  - type: OpenAPI
+    url: openapi/national-geospatial-intelligence-agency-orbit-api-openapi.yml
+  - type: Documentation
+    url: https://earth-info.nga.mil/
+  - type: Portal
+    url: https://earth-info.nga.mil/
 common:
   - type: AgenticAccess
     url: agentic-access/national-geospatial-intelligence-agency-agentic-access.yml
