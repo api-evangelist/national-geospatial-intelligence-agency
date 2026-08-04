@@ -1,0 +1,20 @@
+{
+  "provider": "national-geospatial-intelligence-agency",
+  "sources": [
+    "national-geospatial-intelligence-agency-clock-api-openapi.yml",
+    "national-geospatial-intelligence-agency-eopp-api-openapi.yml",
+    "national-geospatial-intelligence-agency-ephemeris-api-openapi.yml",
+    "national-geospatial-intelligence-agency-orbit-api-openapi.yml"
+  ],
+  "outputs": [
+    "national-geospatial-intelligence-agency-clock-api-openapi.yml",
+    "national-geospatial-intelligence-agency-eopp-api-openapi.yml",
+    "national-geospatial-intelligence-agency-ephemeris-api-openapi.yml",
+    "national-geospatial-intelligence-agency-orbit-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
