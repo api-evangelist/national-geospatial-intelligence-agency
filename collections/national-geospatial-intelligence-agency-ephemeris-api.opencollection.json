@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NGA Earth-Info REST Clock Ephemeris API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ephemeris",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download GPS ephemeris (Center of Mass)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/ephemeris/center-of-mass",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the GPS ephemeris product referenced to the satellite Center of Mass for the specified date."
+        },
+        {
+          "info": {
+            "name": "Download GPS ephemeris (Antenna Phase Center)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/ephemeris/antenna-phase-center",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the GPS ephemeris product referenced to the Antenna Phase Center (APC) for the specified date."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

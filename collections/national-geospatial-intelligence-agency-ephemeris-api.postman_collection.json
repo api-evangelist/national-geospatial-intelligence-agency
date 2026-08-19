@@ -1,0 +1,204 @@
+{
+  "item": [
+    {
+      "id": "6675d04d-05e3-4ccc-9baf-7d31fab5f471",
+      "name": "Ephemeris",
+      "description": {
+        "content": "GPS ephemeris products, including Center of Mass and Antenna Phase Center variants.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f612a4b2-84ce-4c71-8372-b2310a64a181",
+          "name": "Download GPS ephemeris (Center of Mass)",
+          "request": {
+            "name": "Download GPS ephemeris (Center of Mass)",
+            "description": {
+              "content": "Returns the GPS ephemeris product referenced to the satellite Center of Mass for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "ephemeris",
+                "center-of-mass"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "df1f10d4-ecc3-44dd-88a1-a5932f9224dc",
+              "name": "Ephemeris file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ephemeris",
+                    "center-of-mass"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e0803b4-6e7f-46a5-8408-80599869090f",
+          "name": "Download GPS ephemeris (Antenna Phase Center)",
+          "request": {
+            "name": "Download GPS ephemeris (Antenna Phase Center)",
+            "description": {
+              "content": "Returns the GPS ephemeris product referenced to the Antenna Phase Center (APC) for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "ephemeris",
+                "antenna-phase-center"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c93eb15c-1c99-412d-8c70-203f68710c49",
+              "name": "Ephemeris file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "ephemeris",
+                    "antenna-phase-center"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://earth-info.nga.mil",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5fa7dd2a-63c8-4260-bf90-30a216c4cf14",
+    "name": "NGA Earth-Info REST Clock Ephemeris API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Geospatial-Intelligence Agency (NGA) Earth-Info REST API provides programmatic access to GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products published by the NGA Office of Geomatics. Authoritative interactive documentation is published in OpenAPI format on the Earth-Info portal.\n\nContact Support:\n Name: NGA Office of Geomatics\n Email: geomatics@nga.mil",
+      "type": "text/plain"
+    }
+  }
+}

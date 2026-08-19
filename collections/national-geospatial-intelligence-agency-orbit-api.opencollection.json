@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NGA Earth-Info REST Clock Orbit API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orbit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download 9-day orbit prediction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/orbit/9-day",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the 9-day GPS orbit prediction product for the specified date."
+        },
+        {
+          "info": {
+            "name": "Download 30-day orbit prediction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/orbit/30-day",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the 30-day GPS orbit prediction product for the specified date."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

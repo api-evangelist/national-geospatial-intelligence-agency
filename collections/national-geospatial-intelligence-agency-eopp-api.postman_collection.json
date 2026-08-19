@@ -1,0 +1,126 @@
+{
+  "item": [
+    {
+      "id": "173cecad-52d0-406d-83fe-e22f16f9e9b4",
+      "name": "EOPP",
+      "description": {
+        "content": "Earth Orientation Parameter Predictions in multiple formats.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a0c5fa11-46cb-42ec-87cc-80cd0b967f04",
+          "name": "Download Earth Orientation Parameter Predictions",
+          "request": {
+            "name": "Download Earth Orientation Parameter Predictions",
+            "description": {
+              "content": "Returns Earth Orientation Parameter Prediction data for the specified date in the requested format.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "eopp"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>",
+                  "description": "EOPP product format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fa76df55-6418-4c20-b3ca-9f501e4e95b4",
+              "name": "EOPP file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "eopp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://earth-info.nga.mil",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2bba86e8-3fe7-4c2a-a2f4-a817544be48a",
+    "name": "NGA Earth-Info REST Clock EOPP API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Geospatial-Intelligence Agency (NGA) Earth-Info REST API provides programmatic access to GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products published by the NGA Office of Geomatics. Authoritative interactive documentation is published in OpenAPI format on the Earth-Info portal.\n\nContact Support:\n Name: NGA Office of Geomatics\n Email: geomatics@nga.mil",
+      "type": "text/plain"
+    }
+  }
+}

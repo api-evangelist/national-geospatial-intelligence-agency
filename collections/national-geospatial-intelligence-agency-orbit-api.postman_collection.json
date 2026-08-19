@@ -1,0 +1,204 @@
+{
+  "item": [
+    {
+      "id": "bb54aa29-7d4b-4e30-acf0-0a7dfc575d17",
+      "name": "Orbit",
+      "description": {
+        "content": "Short-term orbit prediction products.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9cc0ccd2-bf46-4c89-b8e4-166f1c8dd8a8",
+          "name": "Download 9-day orbit prediction",
+          "request": {
+            "name": "Download 9-day orbit prediction",
+            "description": {
+              "content": "Returns the 9-day GPS orbit prediction product for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orbit",
+                "9-day"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1730171b-eb02-4a62-81a1-28228b625a6f",
+              "name": "9-day orbit prediction file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orbit",
+                    "9-day"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bdd80317-48a4-4e96-873b-0ad473293715",
+          "name": "Download 30-day orbit prediction",
+          "request": {
+            "name": "Download 30-day orbit prediction",
+            "description": {
+              "content": "Returns the 30-day GPS orbit prediction product for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orbit",
+                "30-day"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc348b0d-e135-4a66-a4e1-55e20ab48797",
+              "name": "30-day orbit prediction file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orbit",
+                    "30-day"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://earth-info.nga.mil",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1b3e95b3-8489-4204-ae6e-33cfa0012d90",
+    "name": "NGA Earth-Info REST Clock Orbit API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Geospatial-Intelligence Agency (NGA) Earth-Info REST API provides programmatic access to GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products published by the NGA Office of Geomatics. Authoritative interactive documentation is published in OpenAPI format on the Earth-Info portal.\n\nContact Support:\n Name: NGA Office of Geomatics\n Email: geomatics@nga.mil",
+      "type": "text/plain"
+    }
+  }
+}

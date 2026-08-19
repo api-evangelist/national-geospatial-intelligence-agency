@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "f04b923c-006b-4349-9648-7eb22d474b5f",
+      "name": "Clock",
+      "description": {
+        "content": "Navdata clock state files.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bb54a175-92eb-4d02-a5dd-bda745c57e89",
+          "name": "Download Navdata clock state file",
+          "request": {
+            "name": "Download Navdata clock state file",
+            "description": {
+              "content": "Returns the Navdata clock state file for the specified date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "clock-state"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) Target date in YYYY-MM-DD format."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "57493714-0187-4f48-93a8-8b9dd32f988c",
+              "name": "Clock state file.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "clock-state"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://earth-info.nga.mil",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f8b75b5e-5b2e-4852-9ef1-7eaf47eaf3ab",
+    "name": "NGA Earth-Info REST Clock API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Geospatial-Intelligence Agency (NGA) Earth-Info REST API provides programmatic access to GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products published by the NGA Office of Geomatics. Authoritative interactive documentation is published in OpenAPI format on the Earth-Info portal.\n\nContact Support:\n Name: NGA Office of Geomatics\n Email: geomatics@nga.mil",
+      "type": "text/plain"
+    }
+  }
+}

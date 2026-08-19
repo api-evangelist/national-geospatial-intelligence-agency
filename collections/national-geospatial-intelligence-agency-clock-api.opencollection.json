@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NGA Earth-Info REST Clock API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Clock",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download Navdata clock state file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/clock-state",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              }
+            ]
+          },
+          "docs": "Returns the Navdata clock state file for the specified date."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

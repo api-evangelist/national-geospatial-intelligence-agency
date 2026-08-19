@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NGA Earth-Info REST Clock EOPP API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "EOPP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download Earth Orientation Parameter Predictions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://earth-info.nga.mil/api/eopp",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Target date in YYYY-MM-DD format."
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "EOPP product format."
+              }
+            ]
+          },
+          "docs": "Returns Earth Orientation Parameter Prediction data for the specified date in the requested format."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
