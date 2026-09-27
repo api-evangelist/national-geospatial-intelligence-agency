@@ -36,7 +36,7 @@ created: '2024-12-25'
 modified: '2026-05-19'
 specificationVersion: '0.23'
 tags:
-  - Federal-Government
+  - Federal Government
   - Geospatial
   - Intelligence
   - Defense
@@ -47,6 +47,7 @@ tags_raw:
   - Intelligence
   - Defense
   - Geomatics
+  - Federal-Government
 apis:
 - aid: >-
     national-geospatial-intelligence-agency:national-geospatial-intelligence-agency-clock-api
