@@ -1,4 +1,4 @@
-# National Geospatial-Intelligence Agency (national-geospatial-intelligence-agency)
+# National Geospatial-Intelligence Agency
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,60 +66,120 @@
 
 The National Geospatial-Intelligence Agency (NGA) is a combat support agency within the U.S. Department of Defense that provides geospatial intelligence in support of national security. Through its Office of Geomatics, NGA publishes the Earth-Info portal, which exposes a REST API in OpenAPI format for downloading GPS ephemeris products, Earth Orientation Parameter Predictions (EOPP), Navdata clock state files, and short-term orbit prediction products. NGA also maintains the WGS 84 reference frame, EGM2008 gravitational model, and the GEOTRANS coordinate conversion tool.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/refs/heads/main/apis.yml)
+**Areas:** Federal Government · Geospatial · Intelligence · Defense · Geomatics
 
-## Scope
+## National Geospatial-Intelligence Agency on APIs.io
 
-- **Type:** Index
+Everything profiled for National Geospatial-Intelligence Agency is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/national-geospatial-intelligence-agency/](https://apis.io/providers/national-geospatial-intelligence-agency/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Federal Government
-- Geospatial
-- Intelligence
-- Defense
-- Geomatics
+- [National Geospatial-Intelligence Agency Clock API](https://apis.io/apis/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-clock-api/) — Navdata clock state files.
+- [National Geospatial-Intelligence Agency EOPP API](https://apis.io/apis/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-eopp-api/) — Earth Orientation Parameter Predictions in multiple formats.
+- [National Geospatial-Intelligence Agency Ephemeris API](https://apis.io/apis/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-ephemeris-api/) — GPS ephemeris products, including Center of Mass and Antenna Phase Center variants.
+- [National Geospatial-Intelligence Agency Orbit API](https://apis.io/apis/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-orbit-api/) — Short-term orbit prediction products.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-12-25
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### NGA Earth-Info REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-NGA Office of Geomatics REST API providing programmatic download of GPS ephemeris (Center of Mass and Antenna Phase Center), Earth Orientation Parameter Predictions, Navdata clock state files, and 9-day and 30-day orbit prediction products.
+- [National Geospatial Intelligence Agency Agentic Access](https://apis.io/agentic-access/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-agentic-access/)
 
-- **Human URL:** [https://earth-info.nga.mil/](https://earth-info.nga.mil/)
-- **Base URL:** `https://earth-info.nga.mil/`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Geospatial
-- GPS
-- Ephemeris
-- Geodesy
-- WGS84
+- [NGA Earth-Info REST API](https://apis.io/collections/national-geospatial-intelligence-agency/open-national-geospatial-intelligence-agency/)
+- [NGA Earth-Info REST Clock API](https://apis.io/collections/national-geospatial-intelligence-agency/open-national-geospatial-intelligence-agency-clock-api/)
+- [NGA Earth-Info REST Clock EOPP API](https://apis.io/collections/national-geospatial-intelligence-agency/open-national-geospatial-intelligence-agency-eopp-api/)
+- [NGA Earth-Info REST Clock Ephemeris API](https://apis.io/collections/national-geospatial-intelligence-agency/open-national-geospatial-intelligence-agency-ephemeris-api/)
+- [NGA Earth-Info REST Clock Orbit API](https://apis.io/collections/national-geospatial-intelligence-agency/open-national-geospatial-intelligence-agency-orbit-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://earth-info.nga.mil/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/national-geospatial-intelligence-agency/main/openapi/national-geospatial-intelligence-agency-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Portal](https://earth-info.nga.mil/)
-- [Postman Collection](collections/national-geospatial-intelligence-agency.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/national-geospatial-intelligence-agency.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [National Geospatial Intelligence Agency Domain Security](https://apis.io/security/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-domain-security/)
 
-- [GitHub Organization](https://github.com/ngageoint)
-- [LinkedIn](https://www.linkedin.com/company/nga)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [National Geospatial Intelligence Agency Plans Pricing](https://apis.io/plans/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [National Geospatial Intelligence Agency Rate Limits](https://apis.io/rate-limits/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [National Geospatial Intelligence Agency Finops](https://apis.io/finops/national-geospatial-intelligence-agency/national-geospatial-intelligence-agency-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.nga.mil/)
-- [Portal](https://earth-info.nga.mil/)
-- [Tearline](https://www.tearline.mil/)
-- [Contact](mailto:geomatics@nga.mil)
+- [Blog](https://www.nga.mil/news/News.html)
+- [GitHub](https://github.com/ngageoint)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 23.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 43.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/national-geospatial-intelligence-agency/](https://apis.io/providers/national-geospatial-intelligence-agency/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for National Geospatial-Intelligence Agency: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/national-geospatial-intelligence-agency/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
